@@ -1,5 +1,5 @@
 {
-    "name": "somexjames-blackjack-dapp",
+    "name": "somexjames-blackjack-react",
     "version": "0.1.0",
     "main": "src/index.js",
     "dependencies": {

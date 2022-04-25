@@ -1,18 +1,16 @@
 import { useContext } from "react"
-import { GlobalState } from "../../../global_states/global_state";
-import { dealCards } from "../../../game/functions/dealCards";
-import { generateDeck } from "../../../game/functions/generateDeck";
-import { getCount } from "../../../game/functions/getCount";
+import { GlobalState } from "../../../../../global_states/global_state";
+import { dealCards } from "../functions/dealCards";
+import { generateDeck } from "../functions/generateDeck";
+import { getCount } from "../functions/getCount";
 
 export function newGame() {
     const { currentGameInfo, setGameInfo } = useContext(GlobalState);
     var deck = currentGameInfo.deck;
     var player = currentGameInfo.player;
     var dealer = currentGameInfo.dealer;
-    console.log("NewGame just rendered");
 
     function getRandomCard(__deck) {
-        console.log("getRandomCard() just ran");
         var updatedDeck = __deck;
         var ind = Math.floor(Math.random() * updatedDeck.length);
         const randomCard  = updatedDeck[ind];

@@ -1,21 +1,15 @@
 import { useContext, useEffect } from "react"
-import { GlobalState } from "../../global_states/global_state"
+import { GlobalState } from "../../../../global_states/global_state";
 import { Card, EmptyCard } from "./createCards";
 
 
 
 export function Cards() {
-    const { currentUserInfo, setCurrentUserInfo, currentGameInfo, setGameInfo, accReqPending, setAccReqPending} = useContext(GlobalState);
+    const { currentGameInfo, setGameInfo } = useContext(GlobalState);
     const playerCards = currentGameInfo.player.cards;
     const dealerCards = currentGameInfo.dealer.cards;
     const playerCount = currentGameInfo.player.count;
     const dealerCount = currentGameInfo.dealer.count;
-
-    // useEffect(() => {
-    //     if (currentGameInfo.player !== undefined && currentGameInfo.dealer !== undefined) {
-
-    //     }
-    // })[currentGameInfo.player, currentGameInfo.dealer, currentGameInfo.deck]
 
     var pCardsArr = []
     var dCardsArr = [];

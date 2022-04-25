@@ -1,9 +1,9 @@
 import { Hit } from "./hit";
 import { Stand } from "./stand";
 import { useContext } from "react";
-import { GlobalState } from "../../../global_states/global_state";
-import { dealCards } from "../../../game/functions/dealCards";
-import { generateDeck } from "../../../game/functions/generateDeck";
+import { GlobalState } from "../../../../../global_states/global_state";
+import { dealCards } from "../functions/dealCards";
+import { generateDeck } from "../functions/generateDeck";
 
 export function Buttons(){
     const { currentUserInfo, setCurrentUserInfo, currentGameInfo, setGameInfo, accReqPending, setAccReqPending} = useContext(GlobalState);

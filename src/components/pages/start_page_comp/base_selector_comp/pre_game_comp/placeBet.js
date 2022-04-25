@@ -1,21 +1,20 @@
 import { useContext } from "react"
 import { useEffect } from "react";
-import { GlobalState } from "../../../global_states/global_state"
-import { generateDeck } from "../../../game/functions/generateDeck";
-import { getCount } from "../../../game/functions/getCount";
+import { GlobalState } from "../../../../global_states/global_state"
+import { generateDeck } from "../game_comp/functions/generateDeck";
+import { getCount } from "../game_comp/functions/getCount";
 
 
 export function PlaceBet() {
-    const { currentGameInfo, setGameInfo, currentUserInfo } = useContext(GlobalState);
+    const { currentGameInfo, setGameInfo } = useContext(GlobalState);
     const inputValue = currentGameInfo.inputValue;
-    const balance = currentUserInfo.balance;
+    const balance = currentGameInfo.balance;
     var deck = currentGameInfo.deck;
     var player = currentGameInfo.player;
     var dealer = currentGameInfo.dealer;
-    //const message = currentGameInfo.message;
+    var message = currentGameInfo.message;
 
     function getRandomCard(__deck) {
-        console.log("getRandomCard() just ran");
         var updatedDeck = __deck;
         var ind = Math.floor(Math.random() * updatedDeck.length);
         const randomCard  = updatedDeck[ind];
@@ -90,7 +89,8 @@ export function PlaceBet() {
                     ...prev,
                     currentBet: currentBet,
                     gameOver: false,
-                    message: null
+                    message: null,
+                    inputValue: null
                 }
             })
             
@@ -102,7 +102,7 @@ export function PlaceBet() {
                 <input type="text" placeholder="enter here to bet" value={inputValue} onChange={updateBet}/>
                 <button onClick={placeBet}>Place Bet</button>
             </form>
+            <p>{message}</p>
         </div>
-        
     )
 }

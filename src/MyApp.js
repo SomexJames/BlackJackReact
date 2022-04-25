@@ -1,4 +1,4 @@
-import { StartPage } from "./components/StartPage";
+import { StartPage } from "./components/pages/StartPage";
 import { GlobalStateDefault, GlobalStates } from "./components/states";
 
 

@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { GlobalState } from "../../../global_states/global_state";
-import { getCount } from "../../../game/functions/getCount";
-import { getWinner } from "../../../game/functions/getWinner";
+import { GlobalState } from "../../../../../global_states/global_state";
+import { getCount } from "../functions/getCount";
+import { getWinner } from "../functions/getWinner";
 
 
 export function Stand() {

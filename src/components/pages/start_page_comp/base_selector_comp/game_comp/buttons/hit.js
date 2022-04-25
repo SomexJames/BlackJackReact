@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { GlobalState } from "../../../global_states/global_state";
-import { getCount } from "../../../game/functions/getCount";
-import { getRandomCard } from "../../../game/functions/getRandomCard";
+import { GlobalState } from "../../../../../global_states/global_state";
+import { getCount } from "../functions/getCount";
+import { getRandomCard } from "../functions/getRandomCard";
 
 
 export function Hit() {

@@ -52,7 +52,6 @@ export function newGame() {
       }
 
     function startNewGame() {
-        console.log("startNewGame() just ran");
         deck = deck.length < 10 ? generateDeck() : deck;
         dealCards(deck);
 

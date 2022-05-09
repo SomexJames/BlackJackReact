@@ -10,9 +10,8 @@ export function Hit() {
     var currentBet = currentGameInfo.currentBet;
     var player = currentGameInfo.player;
     var deck = currentGameInfo.deck;
-    console.log("Hit just rendered");
+    var balance = currentGameInfo.balance;
     function hit() {
-      console.log("hit() just ran");
         if (!gameOver) {
             if (currentBet !== null) { // change back to "currentBet"
               const { randomCard, updatedDeck } = getRandomCard(deck);
@@ -20,15 +19,19 @@ export function Hit() {
               player.count = getCount(player.cards);
       
               if (player.count > 21) {
-                setGameInfo(prev => {return { ...prev, player, gameOver: true, message: 'BUST!'}});
+                setGameInfo(prev => {
+                  return {
+                    ...prev,
+                    balance: Number(balance) - Number(currentBet),
+                    player,
+                    gameOver: true,
+                    message: 'BUST!'
+                  }
+                });
               } else {
                 setGameInfo(prev => {return { ...prev, deck: updatedDeck, player}});
               }
-            } else {
-                setGameInfo(prev => {return { ...prev, message: 'Place your bet.'}});
             }
-          } else {
-            setGameInfo(prev => {return { ...prev, message: 'Game over! Please start a new game.'}});
           }
     }
 

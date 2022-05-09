@@ -10,7 +10,6 @@ export function Buttons(){
     var currentBet = currentGameInfo.currentBet;
     var deck = currentGameInfo.deck;
     function startNewGame() {
-        console.log("startNewGame() just ran");
         deck = deck.length < 10 ? generateDeck() : deck;
         dealCards(deck);
 

@@ -42,9 +42,7 @@ export function Stand() {
     // Keep drawing cards until count is 17 or more
         while (dealer.count <= player.count || dealer.count < 12) {
             const {cards, count} = dealerDraw();
-            console.log(cards);
             dealer = {cards, count};
-            console.log(dealer)
             setGameInfo(prev => {
                 return{
                     ...prev,
@@ -59,7 +57,7 @@ export function Stand() {
                     ...prev,
                     deck,
                     dealer,
-                    balance: balance + currentBet,
+                    balance: Number(balance) + Number(currentBet),
                     gameOver: true,
                     message: 'Dealer bust! You win!'
                 }
@@ -69,10 +67,10 @@ export function Stand() {
             const winner = getWinner(dealer, player);
 
             if (winner === 'dealer') {
-                balance -= currentBet;
+                balance = Number(balance) - Number(currentBet);
                 message = 'Dealer wins...';
             } else if (winner === 'player') {
-                balance += currentBet;
+                balance = Number(balance) + Number(currentBet);
                 message = 'You win!';
             } else {
                 message = 'Push.';

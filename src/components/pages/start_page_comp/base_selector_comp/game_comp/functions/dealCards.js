@@ -11,14 +11,9 @@ export function dealCards(deck) {
   const dealerStartingHand = [dealerCard1.randomCard, {}];
 
 
-  // const player = {
-  //   cards: playerStartingHand,
-  //   count: getCount(playerStartingHand) };
+
   const pCount = getCount(playerStartingHand);
 
-  // const dealer = {
-  //   cards: dealerStartingHand,
-  //   count: getCount(dealerStartingHand) };
   const dCount = getCount(dealerStartingHand);
 
   const updatedDeck = playerCard2.updatedDeck;

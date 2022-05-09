@@ -11,11 +11,10 @@ export function Stand() {
     var deck = currentGameInfo.deck;
     var player = currentGameInfo.player;
     var dealer = currentGameInfo.dealer;
-    var wallet = currentGameInfo.wallet;
+    var balance = currentGameInfo.balance;
     var message = currentGameInfo.message;
 
     function getRandomCard() {
-        console.log("getRandomCard() just ran");
         var updatedDeck = deck;
         var ind = Math.floor(Math.random() * updatedDeck.length);
         const randomCard = updatedDeck[ind];
@@ -31,20 +30,14 @@ export function Stand() {
     }
 
     function dealerDraw() {
-        console.log(dealer);
         const randomCard  = getRandomCard();
         const cards = dealer.cards.concat(randomCard);
-        console.log(cards);
         const count = Number(getCount(cards));
         return {cards, count}
     }
 
     function stand() {
-        console.log("stand() just ran");
         if (!gameOver) {
-    // Show dealer's 2nd card
-        // console.log(dealer.cards);
-        // console.log(dealer.count);
 
     // Keep drawing cards until count is 17 or more
         while (dealer.count <= player.count || dealer.count < 12) {
@@ -61,13 +54,12 @@ export function Stand() {
         }
 
         if (dealer.count > 21 ) {
-            // Add transaction code here (based on "currentBet")
             setGameInfo(prev => {
                 return {
                     ...prev,
                     deck,
                     dealer,
-                    wallet, // Add later
+                    balance: balance + currentBet,
                     gameOver: true,
                     message: 'Dealer bust! You win!'
                 }
@@ -77,13 +69,13 @@ export function Stand() {
             const winner = getWinner(dealer, player);
 
             if (winner === 'dealer') {
-            message = 'Dealer wins...';
-            // Add transaction code here (based on "currentBet")
+                balance -= currentBet;
+                message = 'Dealer wins...';
             } else if (winner === 'player') {
-            message = 'You win!';
-            // Add transaction code here (based on "currentBet")
+                balance += currentBet;
+                message = 'You win!';
             } else {
-            message = 'Push.';
+                message = 'Push.';
             }
 
             setGameInfo(prev => {
@@ -91,7 +83,7 @@ export function Stand() {
                     ...prev,
                     deck,
                     dealer,
-                    wallet,
+                    balance,
                     gameOver: true,
                     message
                 }

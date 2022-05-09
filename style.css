@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+    background:#f0e0e0 none repeat scroll 0 0;
+    color: #222;
+    font-size: 100%;
+    line-height: 24px;
+    margin: 0;
+  	padding:0;
+	  font-family: "Exo",sans-serif;
+}
+p {
+  text-align: center;
+}
+
+h2 {
+    color: #1a0e0e;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: normal;
+	  text-transform:uppercase;
+}
+h2 span {
+    display: block;
+    padding: 0;
+    font-size: 18px;
+    opacity: 0.7;
+    margin-top: 5px;
+	  text-transform:uppercase;
+}
+
+
+
+.pregame_background{
+    height: 500px;
+    width: 100%;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 400px;
+    height: 300px;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    color: #fff;
+    text-align: center;    
+}
+
+.ScriptHeader {
+    width: 100%;
+    padding: 2em 0;
+    background: #A9A9A9;
+}
+.rt-heading {
+    margin: 0 auto;
+	text-align:center;
+}
+
+.ScriptHeader h1{
+	font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+    color: #6a4aed;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: normal;
+}
+
+
+
+
+.rt-container {
+  width: 100%;
+	padding-left:12px;
+	padding-right:12px;
+}
+
+button {
+  margin: 0 10px 0 10px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.card, .card-red {
+  height: 150px;
+  width: 100px;
+  background-color: #BFBFBF;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+h3, h4{
+  text-align: center;
+}

@@ -1,19 +1,22 @@
 {
+    "homepage": "https://somexjames.github.io/BlackJackReact",
     "name": "somexjames-blackjack-react",
     "version": "0.1.0",
     "main": "src/index.js",
     "dependencies": {
+        "normalize.css": "^8.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "react-scripts": "^5.0.0",
-        "normalize.css": "^8.0.1",
-        "react-addons-css-transition-group": "^15.6.2"
+        "react-scripts": "^5.0.0"
     },
     "devDependencies": {
         "@babel/runtime": "^7.17.8",
+        "gh-pages": "^3.2.3",
         "typescript": "^4.6.2"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",

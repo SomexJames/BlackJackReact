@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900');
-
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
 
 
 html {
@@ -17,7 +16,7 @@ body {
     line-height: 24px;
     margin: 0;
   	padding:0;
-	  font-family: "Raleway",sans-serif;
+	  font-family: "Exo",sans-serif;
 }
 p {
   text-align: center;
@@ -64,6 +63,7 @@ h2 span {
 .ScriptHeader {
     width: 100%;
     padding: 2em 0;
+    background: #A9A9A9;
 }
 .rt-heading {
     margin: 0 auto;

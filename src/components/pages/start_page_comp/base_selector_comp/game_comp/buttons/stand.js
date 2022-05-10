@@ -40,7 +40,7 @@ export function Stand() {
         if (!gameOver) {
 
     // Keep drawing cards until count is 17 or more
-        while (dealer.count <= player.count || dealer.count < 12) {
+        while (dealer.count < player.count || dealer.count < 12) {
             const {cards, count} = dealerDraw();
             dealer = {cards, count};
             setGameInfo(prev => {

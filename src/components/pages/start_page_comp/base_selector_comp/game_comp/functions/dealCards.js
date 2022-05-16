@@ -19,7 +19,4 @@ export function dealCards(deck) {
   const updatedDeck = playerCard2.updatedDeck;
 
   return [updatedDeck, playerStartingHand, pCount, dealerStartingHand, dCount];
-
-  
-    return  { deck, player, dealer }
 }

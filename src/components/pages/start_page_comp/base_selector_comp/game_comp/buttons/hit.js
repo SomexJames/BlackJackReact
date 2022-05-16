@@ -13,7 +13,7 @@ export function Hit() {
     var balance = currentGameInfo.balance;
     function hit() {
         if (!gameOver) {
-            if (currentBet !== null) { // change back to "currentBet"
+            if (currentBet !== null) {
               const { randomCard, updatedDeck } = getRandomCard(deck);
               player.cards.push(randomCard);
               player.count = getCount(player.cards);

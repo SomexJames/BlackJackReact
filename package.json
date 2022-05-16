@@ -1,7 +1,7 @@
 {
     "homepage": "https://somexjames.github.io/BlackJackReact",
     "name": "somexjames-blackjack-react",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "main": "src/index.js",
     "dependencies": {
         "normalize.css": "^8.0.1",
